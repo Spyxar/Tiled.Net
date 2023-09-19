@@ -44,14 +44,18 @@ public class Tileset : PropertyHolder
     [XmlElement("image")]
     public TiledImage Image;
 
-    //ToDo: https://doc.mapeditor.org/en/stable/reference/tmx-map-format/#tmx-tileset
-    //Terraintypes, wangsets, transformations (wangsets replaced transformations)
-
     [XmlElement("tileoffset")]
     public TilesetTileOffset TileOffset;
 
+    [XmlElement("grid")]
+    public TilesetGrid Grid;
+
+    //ToDo: https://doc.mapeditor.org/en/stable/reference/tmx-map-format/#tmx-tileset
+    //Terraintypes, wangsets, transformations (wangsets replaced terraintypes)
+    //Remember to update the builder when this gets implemented
+
     [XmlElement("tile")]
-    public TilesetTile[] Tiles;
+    public List<TilesetTile> Tiles = new();
 }
 
 public class TilesetTileOffset
@@ -60,6 +64,14 @@ public class TilesetTileOffset
     public int X;
     [XmlAttribute("y")]
     public int Y;
+
+    public TilesetTileOffset() { }
+
+    public TilesetTileOffset(int x, int y)
+    {
+        X = x;
+        Y = y;
+    }
 }
 
 public class TilesetGrid
@@ -71,6 +83,15 @@ public class TilesetGrid
     public int Width;
     [XmlAttribute("height")]
     public int Height;
+
+    public TilesetGrid() { }
+
+    public TilesetGrid(TilesetGridOrientation orientation, int width, int height)
+    {
+        Orientation = orientation;
+        Width = width;
+        Height = height;
+    }
 
     public enum TilesetGridOrientation
     {

@@ -19,10 +19,10 @@ public class TileLayerData
     public string RawTileData;
 
     [XmlElement("chunk")]
-    public TileLayerDataChunk[] Chunks;
+    public List<TileLayerDataChunk> Chunks = new();
 
     [XmlElement("tile")]
-    public TileLayerDataTile[] Tiles;
+    public List<TileLayerDataTile> Tiles = new();
 
     public int[] ConvertRawTileData()
     {
@@ -70,7 +70,18 @@ public class TileLayerDataChunk
     public int Height;
 
     [XmlElement("tile")]
-    public TileLayerDataTile[] Tiles;
+    public List<TileLayerDataTile> Tiles = new();
+
+    public TileLayerDataChunk() { }
+
+    public TileLayerDataChunk(int x, int y, int width, int height, List<TileLayerDataTile> tiles)
+    {
+        X = x;
+        Y = y;
+        Width = width;
+        Height = height;
+        Tiles = tiles;
+    }
 }
 
 /// <summary>
@@ -80,4 +91,11 @@ public class TileLayerDataTile
 {
     [XmlAttribute("gid")]
     public int Gid;
+
+    public TileLayerDataTile() { }
+
+    public TileLayerDataTile(int gid)
+    {
+        Gid = gid;
+    }
 }

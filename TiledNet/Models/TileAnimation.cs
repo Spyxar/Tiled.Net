@@ -5,7 +5,14 @@ namespace TiledNet.Models;
 public class TileAnimation
 {
     [XmlElement("frame")]
-    public TileAnimationFrame[] AnimationFrames;
+    public List<TileAnimationFrame> AnimationFrames = new();
+
+    public TileAnimation() { }
+
+    public TileAnimation(List<TileAnimationFrame> animationFrames)
+    {
+        AnimationFrames = animationFrames;
+    }
 }
 
 public class TileAnimationFrame
@@ -15,4 +22,12 @@ public class TileAnimationFrame
 
     [XmlAttribute("duration")]
     public int FrameDuration;
+
+    public TileAnimationFrame() { }
+
+    public TileAnimationFrame(int tileId, int frameDuration)
+    {
+        TileId = tileId;
+        FrameDuration = frameDuration;
+    }
 }

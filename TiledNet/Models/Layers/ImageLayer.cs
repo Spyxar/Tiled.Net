@@ -43,7 +43,7 @@ public class ImageLayer : PropertyHolder
     [XmlAttribute("repeatx")]
     public bool RepeatX;
     [XmlAttribute("repeaty")]
-    public int RepeatY;
+    public bool RepeatY;
 
     [XmlElement("image")]
     public TiledImage Image;

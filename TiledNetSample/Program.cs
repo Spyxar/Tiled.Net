@@ -1,2 +1,2 @@
-﻿using var game = new MonoTesting.Game1();
+﻿using TiledNetSample.Game1 game = new();
 game.Run();

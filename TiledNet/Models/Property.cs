@@ -19,4 +19,14 @@ public class Property
 
     [XmlAttribute("value")]
     public string Value;
+
+    public Property() { }
+
+    public Property(string name, PropertyType type, string propertyType, string value)
+    {
+        Name = name;
+        Type = type;
+        PropertyType = propertyType;
+        Value = value;
+    }
 }

@@ -20,4 +20,15 @@ public class TiledImage
     public int Width;
     [XmlAttribute("height")]
     public int Height;
+
+    public TiledImage() { }
+
+    public TiledImage(string format, string source, string transparentColor, int width, int height)
+    {
+        Format = format;
+        Source = source;
+        TransparentColor = transparentColor;
+        Width = width;
+        Height = height;
+    }
 }

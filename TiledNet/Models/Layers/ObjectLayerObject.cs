@@ -1,4 +1,5 @@
 ﻿using System.Xml.Serialization;
+using TiledNet.Enums;
 
 namespace TiledNet.Models.Layers;
 
@@ -44,10 +45,49 @@ public class ObjectLayerObject : PropertyHolder
     [XmlElement("point")]
     public PointObject Point;
 
+    [XmlElement("text")]
+    public TextObject Text;
+
     //ToDo: https://doc.mapeditor.org/en/stable/reference/tmx-map-format/#tmx-objectgroup
-    //Polygon, Polyline, Text
+    //Polygon, Polyline
+    //Don't forget to edit the builder
 }
 
 public class EllipseObject { }
 
 public class PointObject { }
+
+public class TextObject
+{
+    [XmlAttribute("fontfamily")]
+    public string FontFamily;
+
+    [XmlAttribute("pixelsize")]
+    public int PixelSize;
+
+    [XmlAttribute("wrap")]
+    public bool WordWrapping;
+
+    [XmlAttribute("color")]
+    public string Color;
+
+    [XmlAttribute("bold")]
+    public bool Bold;
+    [XmlAttribute("italic")]
+    public bool Italic;
+    [XmlAttribute("underline")]
+    public bool Underline;
+    [XmlAttribute("strikeout")]
+    public bool Strikeout;
+
+    [XmlAttribute("kerning")]
+    public bool Kerning;
+
+    [XmlAttribute("halign")]
+    public HorizontalAlignment HorizontalAlignment;
+    [XmlAttribute("valign")]
+    public VerticalAlignment VerticalAlignment;
+
+    [XmlText]
+    public string Text;
+}

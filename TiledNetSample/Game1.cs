@@ -1,10 +1,13 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using TiledNet;
+using TiledNet.Builders;
+using TiledNet.Builders.Layers;
+using TiledNet.Enums;
 using TiledNet.Models;
 using TiledNet.Models.Layers;
 
-namespace MonoTesting;
+namespace TiledNetSample;
 
 public class Game1 : Game
 {
@@ -22,7 +25,20 @@ public class Game1 : Game
 
     protected override void Initialize()
     {
+        //You can either load a map from file, or create your own programmatically
         _map = MapParser.LoadMapFromTmx("ExampleMap.xml");
+
+        _map = new TiledMapBuilder()
+            .AddTileset(new TilesetBuilder().SetFirstGid(5).SetTileDimensions(16, 16).SetName("A").SetTileCount(4).SetColumns(2).SetTiledImage(new TiledImage("", "ExtraColorTiles.png", "", 32, 32)).Build())
+            .AddTileset(new TilesetBuilder().SetFirstGid(11).SetTileDimensions(16, 16).SetName("test").SetTileCount(4).SetColumns(2).SetTiledImage(new TiledImage("", "BaseColorTiles.png", "", 32, 32)).Build())
+            .AddTileLayer(new TileLayerBuilder()
+                .SetDimensions(8, 8)
+                .SetTileLayerData(new TileLayerDataBuilder()
+                    .SetDataEncodingType(DataEncodingType.Csv)
+                    .SetRawTileData("1,2,3,4,5,6,7,8,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3")
+                    .Build())
+                .Build())
+            .Build();
 
         base.Initialize();
     }

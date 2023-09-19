@@ -9,7 +9,7 @@ public abstract class PropertyHolder
 {
     [XmlArray("properties")]
     [XmlArrayItem("property")]
-    public Property[] Properties;
+    public List<Property> Properties = new();
 
     /// <summary>
     /// Gets a property as a string, if you need a different type either use <see cref="GetProperty{T}(string)"/> or cast the return value
