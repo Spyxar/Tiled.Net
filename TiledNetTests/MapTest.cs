@@ -94,11 +94,11 @@ public class MapTest
         """);
         Assert.Multiple(() =>
         {
-            Assert.That(map.Tilesets.Count, Is.EqualTo(2));
-            Assert.That(map.TileLayers.Count, Is.EqualTo(2));
-            Assert.That(map.ObjectLayers.Count, Is.EqualTo(2));
-            Assert.That(map.ImageLayers.Count, Is.EqualTo(2));
-            Assert.That(map.GroupLayers.Count, Is.EqualTo(2));
+            Assert.That(map.Tilesets, Has.Count.EqualTo(2));
+            Assert.That(map.TileLayers, Has.Count.EqualTo(2));
+            Assert.That(map.ObjectLayers, Has.Count.EqualTo(2));
+            Assert.That(map.ImageLayers, Has.Count.EqualTo(2));
+            Assert.That(map.GroupLayers, Has.Count.EqualTo(2));
         });
     }
 }

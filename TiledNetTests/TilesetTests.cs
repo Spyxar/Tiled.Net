@@ -17,7 +17,7 @@ public class TilesetTests
             <tileset firstgid="2" name="ColorTiles" tilewidth="32" tileheight="32" tilecount="8" columns="4"/>
         </map>
         """);
-        Assert.That(map.Tilesets.Count, Is.EqualTo(2));
+        Assert.That(map.Tilesets, Has.Count.EqualTo(2));
         foreach (Tileset tileset in map.Tilesets)
         {
             Assert.Multiple(() =>
