@@ -55,7 +55,7 @@ public class Tileset : PropertyHolder
     //Remember to update the builder when this gets implemented
 
     [XmlElement("tile")]
-    public List<TilesetTile> Tiles = new();
+    public List<TilesetTile> Tiles = [];
 }
 
 public class TilesetTileOffset

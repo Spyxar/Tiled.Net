@@ -36,11 +36,11 @@ public class GroupLayer : PropertyHolder
     public string TintColor;
 
     [XmlElement("layer")]
-    public List<TileLayer> TileLayers = new();
+    public List<TileLayer> TileLayers = [];
     [XmlElement("objectgroup")]
-    public List<ObjectLayer> ObjectLayers = new();
+    public List<ObjectLayer> ObjectLayers = [];
     [XmlElement("imagelayer")]
-    public List<ImageLayer> ImageLayers = new();
+    public List<ImageLayer> ImageLayers = [];
     [XmlElement("group")]
-    public List<GroupLayer> GroupLayers = new();
+    public List<GroupLayer> GroupLayers = [];
 }

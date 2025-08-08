@@ -5,7 +5,7 @@ namespace TiledNet.Models;
 public class TileAnimation
 {
     [XmlElement("frame")]
-    public List<TileAnimationFrame> AnimationFrames = new();
+    public List<TileAnimationFrame> AnimationFrames = [];
 
     public TileAnimation() { }
 

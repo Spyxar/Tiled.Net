@@ -7,7 +7,7 @@ namespace TiledNet.Models;
 public class ObjectTemplate
 {
     [XmlElement("tileset")]
-    public List<Tileset> Tilesets = new();
+    public List<Tileset> Tilesets = [];
 
     [XmlElement("object")]
     public ObjectLayerObject LayerObject;

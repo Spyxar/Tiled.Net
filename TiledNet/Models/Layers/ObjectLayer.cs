@@ -53,5 +53,5 @@ public class ObjectLayer : PropertyHolder
     public DrawOrder DrawOrder;
 
     [XmlElement("object")]
-    public List<ObjectLayerObject> Objects = new();
+    public List<ObjectLayerObject> Objects = [];
 }

@@ -63,16 +63,16 @@ public class TiledMap : PropertyHolder
     public bool Infinite;
 
     [XmlElement("tileset")]
-    public List<Tileset> Tilesets = new();
+    public List<Tileset> Tilesets = [];
 
     [XmlElement("layer")]
-    public List<TileLayer> TileLayers = new();
+    public List<TileLayer> TileLayers = [];
     [XmlElement("objectgroup")]
-    public List<ObjectLayer> ObjectLayers = new();
+    public List<ObjectLayer> ObjectLayers = [];
     [XmlElement("imagelayer")]
-    public List<ImageLayer> ImageLayers = new();
+    public List<ImageLayer> ImageLayers = [];
     [XmlElement("group")]
-    public List<GroupLayer> GroupLayers = new();
+    public List<GroupLayer> GroupLayers = [];
 
     public Tileset GetTilesetByTileGid(int gid)
     {
