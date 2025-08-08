@@ -44,7 +44,7 @@ public class TiledMapBuilder
         return this;
     }
 
-    public TiledMapBuilder SetDimensions(int width,  int height)
+    public TiledMapBuilder SetDimensions(int width, int height)
     {
         _map.Width = width;
         _map.Height = height;
