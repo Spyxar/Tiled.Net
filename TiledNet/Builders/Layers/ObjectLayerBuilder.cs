@@ -85,7 +85,7 @@ public class ObjectLayerBuilder
 
     public ObjectLayerBuilder SetObject(ObjectLayerObject @object)
     {
-        return SetObjects(new() { @object });
+        return SetObjects([@object]);
     }
 
     public ObjectLayerBuilder SetObjects(List<ObjectLayerObject> @object)

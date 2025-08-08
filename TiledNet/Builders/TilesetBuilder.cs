@@ -100,7 +100,7 @@ public class TilesetBuilder
 
     public TilesetBuilder SetTile(TilesetTile tile)
     {
-        return SetTiles(new() { tile });
+        return SetTiles([tile]);
     }
 
     public TilesetBuilder SetTiles(List<TilesetTile> tiles)

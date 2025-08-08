@@ -27,7 +27,7 @@ public class TileLayerDataBuilder
 
     public TileLayerDataBuilder SetChunk(TileLayerDataChunk chunk)
     {
-        return SetChunks(new() { chunk });
+        return SetChunks([chunk]);
     }
 
     public TileLayerDataBuilder SetChunks(List<TileLayerDataChunk> chunks)
@@ -44,7 +44,7 @@ public class TileLayerDataBuilder
 
     public TileLayerDataBuilder SetTile(TileLayerDataTile tile)
     {
-        return SetTiles(new() { tile });
+        return SetTiles([tile]);
     }
 
     public TileLayerDataBuilder SetTiles(List<TileLayerDataTile> tiles)

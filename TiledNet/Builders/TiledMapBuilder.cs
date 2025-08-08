@@ -109,7 +109,7 @@ public class TiledMapBuilder
 
     public TiledMapBuilder SetTileset(Tileset tileset)
     {
-        return SetTilesets(new() { tileset });
+        return SetTilesets([tileset]);
     }
 
     public TiledMapBuilder SetTilesets(List<Tileset> tilesets)
@@ -126,7 +126,7 @@ public class TiledMapBuilder
 
     public TiledMapBuilder SetTileLayer(TileLayer tileLayer)
     {
-        return SetTileLayers(new() { tileLayer });
+        return SetTileLayers([tileLayer]);
     }
 
     public TiledMapBuilder SetTileLayers(List<TileLayer> tileLayers)
@@ -142,7 +142,7 @@ public class TiledMapBuilder
     }
     public TiledMapBuilder SetObjectLayer(ObjectLayer objectLayer)
     {
-        return SetObjectLayers(new() { objectLayer });
+        return SetObjectLayers([objectLayer]);
     }
 
     public TiledMapBuilder SetObjectLayers(List<ObjectLayer> objectLayers)

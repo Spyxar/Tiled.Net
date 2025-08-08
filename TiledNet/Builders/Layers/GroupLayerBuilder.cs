@@ -58,7 +58,7 @@ public class GroupLayerBuilder
 
     public GroupLayerBuilder SetTileLayer(TileLayer tileLayer)
     {
-        return SetTileLayers(new() { tileLayer });
+        return SetTileLayers([tileLayer]);
     }
 
     public GroupLayerBuilder SetTileLayers(List<TileLayer> tileLayers)
@@ -75,7 +75,7 @@ public class GroupLayerBuilder
 
     public GroupLayerBuilder SetObjectLayer(ObjectLayer objectLayer)
     {
-        return SetObjectLayers(new() { objectLayer });
+        return SetObjectLayers([objectLayer]);
     }
 
     public GroupLayerBuilder SetObjectLayers(List<ObjectLayer> objectLayers)
@@ -92,7 +92,7 @@ public class GroupLayerBuilder
 
     public GroupLayerBuilder SetImageLayer(ImageLayer imageLayer)
     {
-        return SetImageLayers(new() { imageLayer });
+        return SetImageLayers([imageLayer]);
     }
 
     public GroupLayerBuilder SetImageLayers(List<ImageLayer> imageLayers)
@@ -109,7 +109,7 @@ public class GroupLayerBuilder
 
     public GroupLayerBuilder SetGroupLayer(GroupLayer groupLayer)
     {
-        return SetGroupLayers(new() { groupLayer });
+        return SetGroupLayers([groupLayer]);
     }
 
     public GroupLayerBuilder SetGroupLayers(List<GroupLayer> groupLayers)
